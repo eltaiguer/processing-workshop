@@ -6,16 +6,18 @@ void setup()
   fill(192);
   noStroke();
   rect(40, 40, 40, 40);
-  
+
+  // saves the current coordinate system
   pushMatrix();
   // move the origin to the pivot point
-  translate(40, 40); 
-  
+  translate(40, 40);
+
   // then pivot the grid
   rotate(radians(45));
-  
+
   // and draw the square at the origin
   fill(0);
   rect(0, 0, 40, 40);
+  // loads the saved coordinate system
   popMatrix();
 }
